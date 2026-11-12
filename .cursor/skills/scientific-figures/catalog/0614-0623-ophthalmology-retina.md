@@ -1,0 +1,16 @@
+# 眼科视网膜 · Ophthalmology & retina  `614-623`
+
+10 figures. Run any of them from `scripts/`; the PNG lands in `output/` under the same number.
+
+| # | Script | What it draws | Use when |
+|---|--------|---------------|----------|
+| 614 | `fig_cry_permafrost_thaw.py` | Time-depth ground-temperature envelope of a degrading permafrost borehole with a bold 0 degC isotherm, a visible zero curtain, the active-layer thickness series and warming rates at four depths | 冻土工程勘察、寒区基础设施评估、多年冻土监测站报告, "冻土退化, 活动层厚度, 地温剖面, 零幕效应, 零年振幅深度, 深度轴向下" |
+| 615 | `fig_vol_eruption_history.py` | Five centuries of eruptions as a bubble timeline sized by VEI and coloured by eruptive style, with a cumulative curve, a log-linear size-frequency distribution and three stacked precursor time series | 火山监测台站年报、喷发危险性评估、火山预警科普, "火山喷发史, VEI 指数, 喷发间隔, 累积曲线, 喷发前兆, 地震频次, SO2 通量" |
+| 616 | `fig_eqk_focal_mechanism.py` | Focal-mechanism map where every beach ball is a real P-wave radiation pattern computed from strike, dip and rake, with an equal-area P/T stereonet and a P-axis rose giving SHmax and the stress ratio | 地震构造分析、区域应力场反演、活动断裂研究, "震源机制解, 沙滩球, 赤平投影, 等面积投影, P轴T轴, 主压应力方向" |
+| 617 | `fig_eqk_hazard_map.py` | Probabilistic seismic hazard map of 475-year PGA with active faults and historic epicentres, plus site hazard curves marking the 10 % in 50 year design level and the ground-motion attenuation model behind both | 抗震设防区划、工程场地地震安全性评价、地震危险性报告, "地震危险性, 峰值地面加速度, PGA, 超越概率, 危险性曲线, 地震动衰减, 活动断层" |
+| 618 | `fig_swe_code_evolution.py` | Stacked module KLOC across 30 releases with refactor rules and a technical-debt curve on the right axis; churn-vs-stability file scatter and per-release commit volume alongside | 软件演化分析, 技术债追踪, 代码库体量增长, "代码演化" "技术债" "重构" "热点文件" |
+| 619 | `fig_swe_dependency_graph.py` | Four-tier module dependency graph with node area by KLOC and edge width by coupling, one layering violation closing a cycle in house red; per-tier fan-in/fan-out bars and an instability-abstractness main-sequence plot | 架构依赖审查, 分层架构治理, 循环依赖检测, "依赖图" "循环依赖" "扇入扇出" "主序列" |
+| 620 | `fig_swe_defect_density.py` | Defect density against cyclomatic complexity, bubbles sized by KLOC and coloured by component family, least-squares trend with 95% band and a shaded high-risk quadrant; defect burn-up and severity mix bars | 质量度量, 缺陷预测, 代码风险评估, "缺陷密度" "圈复杂度" "高风险象限" "燃尽曲线" |
+| 621 | `fig_db_query_plan.py` | Bottom-up query execution plan tree, each operator box carrying estimated and actual rows plus self time, nodes missing their estimate by 4x stroked in house red; operator time-share bars and a cost-model deviation plot | 数据库调优, 执行计划分析, 基数估计误差定位, "执行计划" "算子树" "基数估计" "查询调优" |
+| 622 | `fig_db_index_performance.py` | Point-lookup latency against table size on log-log axes for five access strategies with a numerically located break-even band; write-amplification versus space-overhead trade-off and the cheapest strategy per read share | 索引选型, 数据库容量规划, 读写权衡分析, "索引性能" "全表扫描" "写放大" "交叉点" |
+| 623 | `fig_db_workload_profile.py` | Diurnal QPS with the P50/P95/P99 latency ladder on a twin axis, SLA line and red breach windows, a shared-axis query-mix stack below, and the pooled latency CDF with a magnified tail | 数据库负载画像, SLA 达标监控, 长尾延迟诊断, "负载画像" "延迟分位数" "SLA 超限" "长尾" |

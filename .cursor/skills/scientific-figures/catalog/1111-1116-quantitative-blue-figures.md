@@ -1,0 +1,12 @@
+# 世界模型 · 蓝色定量图 Quantitative blue figures  `1111-1116`
+
+6 figures. Run any of them from `scripts/`; the PNG lands in `output/` under the same number.
+
+| # | Script | What it draws | Use when |
+|---|--------|---------------|----------|
+| 1111 | `fig_wm_blue_bar_ranking.py` | `output/1111_wm_blue_bar_ranking.png` | Ranked horizontal bars, top-28 object categories; bar shade follows the frequency ranking (deep = frequent), counts labelled past each bar end, inline ramp key and total-instance call-out |
+| 1112 | `fig_wm_blue_hist_pair.py` | `output/1112_wm_blue_hist_pair.png` | Paired histograms (evidence length, referent separation) with deep-blue KDE overlay, dashed mean / dotted median rules, corner n-mean-median boxes and a y axis shared across both panels. Panel (a) counts frames, so its median prints as an integer or a half rather than padded decimals |
+| 1113 | `fig_wm_blue_curves_grid.py` | `output/1113_wm_blue_curves_grid.png` | 4x4 learning-curve grid over 16 control tasks; the suptitle states the finding ("leads on fourteen of sixteen suites", counted from the plotted curves) and the footnote carries the method. Three baselines take three rungs of the blue ladder, Ours is the only warm curve, +/-1 s.d. bands narrow as training converges, one y range for the whole grid |
+| 1114 | `fig_wm_blue_perf_compare.py` | `output/1114_wm_blue_perf_compare.png` | Grouped bars, six methods x three benchmarks; five ladder rungs plus the warm Ours bar and 6 pt haloed value labels. `gen_data` draws `N_RUNS` evaluation runs and reduces them, so the bar height and its whisker are the mean and s.d. of the same numbers the caption promises; the dashed rule is the strongest baseline of each group, read off the plotted means |
+| 1115 | `fig_wm_blue_box_strip.py` | `output/1115_wm_blue_box_strip.png` | Box + jitter strip for five rollout models with medians labelled above each whisker cap, plus a 28 %-width lower-triangular Welch-test matrix shaded by significance |
+| 1116 | `fig_wm_blue_data_composition.py` | `output/1116_wm_blue_data_composition.png` | Nested two-stage donut beside a stacked percentage-bar breakdown of five data sources; one ladder, one source order and one shared legend across both panels. Ring slices under 6 % are pooled smallest-first into a grey-blue "Other sources" wedge so every sector carries a label, and the stage captions sit in the circle's empty corners |

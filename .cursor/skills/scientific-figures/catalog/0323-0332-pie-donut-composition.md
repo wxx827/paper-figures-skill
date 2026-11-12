@@ -1,0 +1,16 @@
+# 饼图与占比构成 · Pie / donut composition  `323-332`
+
+10 figures. Run any of them from `scripts/`; the PNG lands in `output/` under the same number.
+
+| # | Script | What it draws | Use when |
+|---|--------|---------------|----------|
+| 323 | `fig_pie_dataset_composition.py` | Flagship dataset-composition donut: 10 classes on a single-hue lightness ramp with 2 pt white separators, an exploded leading slice, de-overlapped elbow leader labels carrying percentage and count, grand total in the hole, plus a train/val/test donut and per-class volume bars on a grey subordinate card | CV 论文数据集构成图、语料统计, "数据集构成" "甜甜圈" "引导线标签" |
+| 324 | `fig_pie_nested_donut.py` | Nested two-ring donut: four parent classes inside, eleven subclasses outside tinted from the parent hue, outer values on non-crossing leader lines, and an indented parent/child hierarchy legend with a continuous tree spine | 层级分类占比、两级标签体系, "嵌套双环" "父子色系继承" "层级图例" |
+| 325 | `fig_pie_sunburst.py` | Three-level sunburst hand-built from polar bars, angular spans inherited from the parent node, arc-rotated ring labels with auto-flip, radiating leaf names, root in the hole, beside a three-row icicle chart that unrolls the identical tree | 树状占比、多级分类体系, "旭日图" "极坐标三层环" "冰柱图" |
+| 326 | `fig_pie_grid_compare.py` | Eight small-multiple donuts on one locked scale: identical palette, category order and 12 o'clock start, with a faint reference ring and grey ticks marking the pooled-average slice boundaries so deviations are readable, one shared legend below | 多数据集/城市构成对比、小倍数, "多饼对比" "共享配色" "平均基准刻度" |
+| 327 | `fig_pie_semi_gauge.py` | Four semicircular gauges with light tracks, hub-pointing triangular target markers and large centred numbers, coloured amber or green purely by the pass/fail test, over a shared-y strip of the same metrics across training | 指标达标看板、验收报告, "半圆仪表盘" "目标线" "达标配色" |
+| 328 | `fig_pie_waffle_chart.py` | Three 10x10 waffle grids of rounded tiles, one tile per percentage point, filled left-to-right and bottom-to-top in a fixed shared category order, with per-panel value chips and one named colour strip at the bottom | 误差构成对比、饼图替代方案, "华夫饼图" "圆角方格" "百分点计数" |
+| 329 | `fig_pie_polar_stacked.py` | Polar stacked ring where sector angle picks the class, radius counts instances and four difficulty bands stack outward, with dashed radial guides and class names on a fixed outer ring, paired with a renormalised 100 % bar twin | 类内子构成、绝对量与占比并置, "极坐标堆叠环" "径向堆叠" "归一化对照" |
+| 330 | `fig_pie_bar_of_pie.py` | Classic bar of pie: solid five-slice pie with the Others wedge exploded, its two cut edges carried by dashed leaders and a pale funnel to a stacked bar that redistributes the wedge over five tail classes, dual-scale labelling | 尾部类别展开、Others 明细, "饼图加条形" "虚线引出" "尾部细分" |
+| 331 | `fig_pie_radial_progress.py` | Nine dashboard cells ranked by composite score, each three round-capped concentric progress arcs on a grey track starting at 12 o'clock, composite in the hole and an exact numeric read-out beside every dial | 模型评测网格、多指标仪表盘, "径向进度环" "同心环" "圆角端点" |
+| 332 | `fig_pie_composition_flow.py` | Composition evolution: start-year and end-year donuts joined by translucent smoothstep Sankey ribbons that taper from source share to target share, colour inherited from the source class, over a diverging share-change bar strip | 占比演变、前后构成对比, "饼图加桑基" "缎带流转" "份额变化" |

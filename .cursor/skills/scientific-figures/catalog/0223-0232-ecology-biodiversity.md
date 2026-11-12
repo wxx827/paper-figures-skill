@@ -1,0 +1,16 @@
+# 生态与生物多样性 · Ecology & biodiversity  `223-232`
+
+10 figures. Run any of them from `scripts/`; the PNG lands in `output/` under the same number.
+
+| # | Script | What it draws | Use when |
+|---|--------|---------------|----------|
+| 223 | `fig_species_accumulation.py` | Individual-based rarefaction / extrapolation curves for four habitats, solid inside the reference sample and dashed beyond it, with bootstrap bands, dotted asymptotic-richness estimates and a 40 %-width observed-vs-estimated bar panel | 抽样充分性评估、生境物种数对比、稀疏化曲线报告, "物种累积曲线, 稀疏化曲线, 渐近物种数" |
+| 224 | `fig_food_web.py` | Trophic network laid out on discrete trophic levels, node area by standing biomass and hue by functional group, curved prey-to-predator arrows scaled by energy flux, plus a subordinate square-root biomass pyramid | 食物网结构、营养级能流、群落功能群组成, "食物网, 营养级, 能量金字塔" |
+| 225 | `fig_ordination_nmds.py` | Bray-Curtis NMDS with per-treatment 95 % confidence ellipses, centroids joined by a successional trajectory, fitted environmental vectors, a stress / PERMANOVA call-out and a small PCoA eigenvalue bar | 群落组成差异、处理梯度响应、环境因子解释, "NMDS排序图, 置信椭圆, 环境因子矢量" |
+| 226 | `fig_rank_abundance.py` | Six-plot Whittaker grid on one globally derived rank axis and shared log abundance axis, with log-normal and geometric-series overlays, dominant-species call-outs and per-panel diversity statistics | 物种多度分布模型比较、样地间群落结构对比, "多度分布曲线, Whittaker图, 优势度" |
+| 227 | `fig_phylo_traits.py` | Hand-drawn rectangular phylogram with branch depths, bootstrap support and tip leaders, locked by a shared y-limit to an aligned trait matrix of three z-scored continuous traits and two categorical traits | 系统发育信号、性状进化、比较生物学制图, "系统发育树, 性状矩阵, 热图对齐" |
+| 228 | `fig_species_distribution.py` | Maxent-style suitability surface with binarisation contour, occurrence overlay, scale bar and colorbar, beside a 2x2 block of marginal response curves on one shared 0-1 axis and a permutation-importance bar chart | 物种分布模型、生境适宜性预测、变量贡献分析, "物种分布模型, 适生区, 响应曲线" |
+| 229 | `fig_population_dynamics.py` | Four views of one Lotka-Volterra simulation: multi-species density series on twin axes, phase plane with nullclines and an inward spiral, stacked age-class composition, and a density-dependence regression with fitted carrying capacity | 种群动态、捕食者-猎物系统、密度制约与年龄结构, "种群动态, 相平面轨迹, 密度制约" |
+| 230 | `fig_biodiversity_hotspot.py` | Species-richness raster clipped to a synthetic coastline with top-decile hotspot contour, five protected-area outlines, north arrow, scale bar and inset colorbar, beside a conservation-gap bar chart against the 30 % target | 生物多样性热点识别、保护空缺分析、保护区规划, "热点地图, 保护空缺, 物种丰富度栅格" |
+| 231 | `fig_functional_traits.py` | Trait-space PCA with per-growth-form convex hulls and loading arrows, a 2x2 block of subordinate radar profiles sharing a 0-1 axis and a grand-mean reference polygon, a lower-triangle trait correlation matrix and a PC1 / PC2 loading chart | 功能性状空间、性状权衡、功能群划分, "功能性状, 性状空间PCA, 雷达图" |
+| 232 | `fig_monitoring_panel.py` | Monitoring dashboard: three KPI cards with sparklines and signed decadal change, a trend-ordered species-by-year abundance heatmap, a Shannon trajectory with changepoint annotation, and a full-width phenology shift strip | 长期生态监测汇报、指标仪表板、物候期变化展示, "监测面板, KPI卡片, 物候甘特图" |

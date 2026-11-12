@@ -1,0 +1,16 @@
+# 交通与城市 · Transport & urban  `203-212`
+
+10 figures. Run any of them from `scripts/`; the PNG lands in `output/` under the same number.
+
+| # | Script | What it draws | Use when |
+|---|--------|---------------|----------|
+| 203 | `fig_traffic_fundamental.py` | Flow-density, speed-density and flow-speed clouds from one simulated detector day, points coloured by a cyclic hour-of-day ramp, with the calibrated curve split into uncongested and congested branches and the capacity point called out | Fundamental diagram teaching or calibration figure, "交通流基本图" "临界密度" |
+| 204 | `fig_network_speed_map.py` | Bent-polyline street network with stroke width by road class and colour by peak-hour speed on a five-step level-of-service ramp, dark casings on the worst links, plus a speed histogram and an LOS length-share key grouped on a light card | Network performance map, congestion diagnosis, "路网速度地图" "服务水平" |
+| 205 | `fig_od_matrix_chord.py` | Twelve-zone daily OD matrix on a log colour scale with district ribbons on both margins, paired with a chord diagram of each zone's three strongest outbound relations under one district colour key | Travel demand and OD structure, "OD矩阵" "弦图" |
+| 206 | `fig_time_space_diagram.py` | Newell car-following trajectories on a two-signal arterial, coloured by instantaneous speed, with a contoured congestion envelope, red/green signal indications drawn at each stop line and a stop-line discharge strip below | Shockwave analysis, signal coordination, "时空轨迹图" "激波" |
+| 207 | `fig_mode_share.py` | Directly-labelled twenty-year stacked modal split with event markers, log-axis trip-length violins per mode and a 2015-to-2025 mode-transition matrix, all sharing one mode colour key | Modal split evolution and mode shift, "出行方式分担" "方式转移" |
+| 208 | `fig_congestion_heatmap.py` | Corridor-by-time congestion-index heat map with rows ordered by their own peak hour into morning- and evening-dominant blocks, an incident call-out, a network-average trace on top and daily congested-hours bars on the right | Space-time congestion monitoring, "拥堵时空热图" "早晚高峰" |
+| 209 | `fig_metro_ridership.py` | Octilinear five-line metro schematic with white line casings, station dots sized by boardings and white interchange rings, plus a mirrored entry/exit gate profile and a top-ten station ranking tinted by line | Rail ridership and network loading, "地铁线网图" "客流排行" |
+| 210 | `fig_urban_form_metrics.py` | Six urban-form rasters - expansion epoch, building density, road density, floor area ratio, park accessibility and land-use mix - all clipped to one shared star-shaped built-up footprint with identical panel and colour-bar geometry | Urban morphology indicator panel, "城市形态指标" "栅格面板" |
+| 211 | `fig_accessibility_isochrone.py` | Dijkstra travel-time isochrones at 15/30/45/60 min over a corridor-weighted speed raster, with opportunity POIs, and a cumulative reachable population / jobs curve sharing the band colours as its key | Accessibility and catchment analysis, "等时圈" "可达性" |
+| 212 | `fig_crash_analysis.py` | Four-way safety dashboard: crash-density KDE hotspots over a faint street grid, hour-by-weekday count matrix, crash-type Pareto with cumulative curve and a severity composition indexed to the same category order | Road-safety diagnosis and black-spot review, "事故分析" "帕累托图" |

@@ -1,0 +1,129 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: .cursor/skills/scientific-figures/scripts
+
+jobs:
+  typography:
+    # The whole point of this job is that the runner does NOT have Times New
+    # Roman. If the bundled Tinos did not resolve, every figure would render in
+    # a fallback face and nothing else in the pipeline would notice.
+    name: Typography (py${{ matrix.python }})
+    # Pinned rather than ubuntu-latest: setup-python has no Python 3.9 build
+    # for Ubuntu 26.04, and 3.9 is the floor the README promises.
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.9", "3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r ../../../../requirements.txt
+
+      - name: Report which faces the runner can see
+        # Diagnostic only: on a bare runner this should print the bundled Tinos
+        # and nothing else, which is exactly the case the next step guards.
+        run: |
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, ".")
+          import pubstyle as ps
+          print("bundled :", ps._register_bundled_fonts())
+          available = ps.available_fonts()
+          for name in ps.SERIF_STACK:
+              print("  {:4s} {}".format("YES" if name in available else "-",
+                                        name))
+          PY
+
+      - name: Font stack must resolve to a Times-metric face
+        run: python check_typography.py --metrics
+
+      - name: Lint sources (type scale, rcParams escapes, titles, panel letters)
+        run: python check_typography.py --source-only
+
+      - name: Render probe - read the fonts actually embedded in the PDFs
+        run: python check_typography.py --render 25
+
+  frontdoor:
+    name: plot_data.py front door
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install a CJK font
+        # Without one the Chinese cases render tofu boxes and still exit 0,
+        # so the path that matters most for those users would go untested.
+        run: sudo apt-get update -qq && sudo apt-get install -y fonts-noto-cjk
+
+      - name: Install dependencies
+        run: pip install -r ../../../../requirements.txt
+
+      - name: Rebuild the sample data
+        working-directory: .cursor/skills/scientific-figures/examples
+        run: python make_examples.py
+
+      - name: Every chart kind, including the GBK / Chinese path
+        run: python _smoke_plot_data.py
+
+      - name: Column profiling and the data-contract report
+        run: |
+          python plot_data.py --data ../examples/sales.csv --describe
+          python plot_data.py --data ../examples/clinical_gbk.csv --describe
+          python plot_data.py --contract fig_threshold_regression.py
+
+      - name: Upload the rendered chart kinds
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: plot-data-smoke
+          path: .cursor/skills/scientific-figures/examples/_smoke/
+          retention-days: 7
+          if-no-files-found: warn
+
+  render:
+    name: Render smoke test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r ../../../../requirements.txt
+
+      - name: Render a cross-section of the library
+        run: python run_all.py --parallel 4 --range 0-60 --vector
+
+      - name: Audit the produced PNGs
+        run: python check_figures.py --quick
+
+      - name: Upload rendered sample
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-sample
+          path: .cursor/skills/scientific-figures/output/
+          retention-days: 7
+          if-no-files-found: warn

@@ -1,0 +1,16 @@
+# 制造与质量管理 · Manufacturing & quality  `243-252`
+
+10 figures. Run any of them from `scripts/`; the PNG lands in `output/` under the same number.
+
+| # | Script | What it draws | Use when |
+|---|--------|---------------|----------|
+| 243 | `fig_control_chart.py` | Shewhart X-bar over R chart on a shared subgroup axis; Phase-I limits from the first fifteen subgroups, three graded sigma zones with an alarm wash beyond 3 sigma, and Nelson rule 1 / 2 / 5 violations circled in red with the rule number in a ringed badge | SPC过程监控、控制图判异准则、稳定性判定, "SPC控制图" |
+| 244 | `fig_process_capability.py` | Capability study in four blocks: specification-clipped histogram with within- and overall-sigma normal fits and red out-of-spec tails, a stacked Cp/Cpk/Pp/Ppk card column colour-graded by verdict, a reduced measurement-order trend strip and a predicted-ppm defect card | 过程能力分析、Cpk评估、规格限与不良率, "过程能力分析图" |
+| 245 | `fig_pareto_defects.py` | Defect Pareto with descending occurrence bars, twin-axis cumulative share polyline, the 80% threshold and its vertical cut, a tinted vital-few band with headline callout and a DPMO summary box | 缺陷帕累托、80/20关键少数、质量改善优先级, "帕累托缺陷图" |
+| 246 | `fig_ishikawa.py` | Fishbone cause-and-effect diagram drawn purely from patches: tail, arrowed spine into a navy effect head, six category ribs for the manufacturing Ms and eighteen small bones, with three verified root causes highlighted in red | 鱼骨图、因果分析、5why根因追溯、六要素分析, "鱼骨图因果分析" |
+| 247 | `fig_weibull_reliability.py` | Three-lot Weibull triptych sharing one colour key: median-rank points with RRX fit lines on Weibull probability paper, reliability curves inside perturbation envelopes with B10 markers, and log-scale hazard curves labelled by failure regime | 威布尔分析、可靠性寿命试验、失效率对比, "威布尔可靠性图" |
+| 248 | `fig_bathtub_curve.py` | Bathtub hazard curve with its three dashed components superimposed, tinted infant-mortality / useful-life / wear-out bands, a minimum-hazard callout, and an aligned strip of phase-specific maintenance strategies below | 浴盆曲线、失效率三阶段、维修策略分区, "浴盆曲线" |
+| 249 | `fig_taguchi_effects.py` | Eight-factor Taguchi main-effects grid on one common S/N axis so effect sizes stay comparable; grand-mean rule through every panel, amber best-level markers, per-panel delta and rank, and the three strongest factors shaded | 田口方法、主效应图、正交试验参数优化, "田口主效应图" |
+| 250 | `fig_gage_rr.py` | AIAG gage R&R board: part-by-operator interaction plot sharing its measurement axis with the operator-sectioned X-bar chart, an in-control R chart, and a variance panel pairing a stacked contribution bar with a %R&R gauge over 10% / 30% acceptance zones | 量具重复性再现性、MSA测量系统分析, "GageRR量具分析" |
+| 251 | `fig_wafer_map.py` | Circular wafer bin map of square die coloured by five discrete bins, showing an edge ring, a centre cluster and a handling scratch, with a grey-blocked subordinate column holding the radial yield profile and the failure-mode share bars | 晶圆良率图、缺陷分布模式、半导体失效分析, "晶圆缺陷图" |
+| 252 | `fig_oee_dashboard.py` | OEE dashboard: four progress-ring KPI cards chained by multiplication signs into a navy hero card, a horizontal six-big-losses waterfall with connectors, a three-shift trend against target, and an asset ranking with target and line-mean rules | OEE设备综合效率、六大损失、精益生产看板, "OEE仪表盘" |

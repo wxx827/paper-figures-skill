@@ -1,0 +1,16 @@
+# 计算机视觉定性对比 · Computer vision qualitative  `253-262`
+
+10 figures. Run any of them from `scripts/`; the PNG lands in `output/` under the same number.
+
+| # | Script | What it draws | Use when |
+|---|--------|---------------|----------|
+| 253 | `fig_cv_fusion_grid.py` | Three anatomical planes by eight columns (MRI, PET and six fusion methods) of a synthetic brain phantom, every tile carrying two corner zoom insets whose red and orange crop windows are fixed per row, with source/method group headers and a highlighted ours column | 多模态图像融合定性对比、顶会级双彩框放大版式, "图像融合, 定性对比网格, 放大插图, 医学影像, MRI PET" |
+| 254 | `fig_cv_ablation_grid.py` | Two fluorescence fields by five progressively complete model variants, LaTeX component symbols in the column labels, one red-boxed zoom inset per tile with a connector line and a per-tile IoU chip | 消融实验逐模块可视化、组件符号列标题, "消融实验, 模块消融, 定性对比, 局部放大, 荧光显微" |
+| 255 | `fig_cv_segmentation_compare.py` | Three synthetic street scenes by image, ground truth and five segmenters with translucent seven-class overlays, per-tile mIoU, white dashed ellipses on the regions only ours recovers, and a shared class legend strip | 语义分割方法横向对比、类别掩膜叠加与改进区域标注, "语义分割, 掩膜叠加, mIoU, 类别图例, 对比矩阵" |
+| 256 | `fig_cv_detection_compare.py` | Two driving scenes by ground truth and four detectors, class/confidence chips that reflow at the tile borders, red dashed boxes for missed objects and struck-through boxes for false positives | 目标检测结果对比、漏检误检标注规范, "目标检测, 检测框, 置信度标签, 漏检, 误检" |
+| 257 | `fig_cv_superres_compare.py` | Six-column x4 super-resolution comparison on a high-frequency building facade, PSNR/SSIM measured against the HR reference under each frame, and a column-aligned red-box crop row underneath | 超分辨率双行放大版式、细节恢复能力对比, "超分辨率, PSNR, SSIM, 放大子图, 双行版式" |
+| 258 | `fig_cv_denoise_compare.py` | Two degradation types (Gaussian noise, rain streaks) by degraded input, three restorers, ours and the clean reference on a synthetic alpine landscape, each tile with a linked red zoom inset and a corner PSNR chip | 图像复原/去噪去雨对比、多退化类型分行展示, "图像去噪, 去雨, 图像复原, PSNR, 局部放大" |
+| 259 | `fig_cv_depth_compare.py` | Two analytically ray-cast corridor scenes by RGB, GT depth, three monocular estimators, ours and the signed error of our prediction, with one shared magma depth bar and a separate symmetric error bar | 单目深度估计对比、误差图与共享色标规范, "深度估计, 深度图, 误差图, 发散色带, 共享色标" |
+| 260 | `fig_cv_failure_cases.py` | Three systematic failure modes of a cell segmenter (touching cells, small objects, glare) by input, ours, ground truth and an FP/FN error map, beside a subordinate grey commentary card explaining each cause | 失败案例诚实展示、失败模式归因与说明卡片, "失败案例, 误差图, 假阳性, 假阴性, 归因分析" |
+| 261 | `fig_cv_dataset_montage.py` | Six capture conditions by eight procedurally rendered 72 x 72 thumbnails with per-tile ID chips, next to a narrow support column holding per-condition frame counts and a dataset summary card | 数据集样本蒙太奇、多样性展示与统计附属面板, "数据集展示, 样本蒙太奇, 缩略图网格, 数据统计卡片" |
+| 262 | `fig_cv_error_map_grid.py` | Three sequences by frame and three optical-flow estimators, colour-wheel-coded flow in the main tile and the end-point-error map as a lower-right inset, all insets sharing one error scale, with a flow colour wheel legend | 误差图对比矩阵、结果与误差同格展示, "光流估计, 误差矩阵, EPE, 色轮编码, 误差热图" |

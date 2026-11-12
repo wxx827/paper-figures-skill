@@ -1,0 +1,16 @@
+# 生物力学 · Biomechanics  `554-563`
+
+10 figures. Run any of them from `scripts/`; the PNG lands in `output/` under the same number.
+
+| # | Script | What it draws | Use when |
+|---|--------|---------------|----------|
+| 554 | `fig_atm_source_apportionment.py` | Five-factor PMF source apportionment: species fingerprint stack, annual mass donut with leader labels and monthly contribution stackplot, all derived from one contribution matrix | 颗粒物源解析报告、污染来源构成分析, "源解析, PMF因子谱, 贡献占比" |
+| 555 | `fig_atm_back_trajectory.py` | 72 h back trajectories on an equidistant map coloured by arrival $PM_{2.5}$, with receptor star, 24 h time markers, scale bar, north arrow and cluster frequency / concentration bars | 污染输送路径分析、气团来源聚类, "后向轨迹, 输送通道, 轨迹聚类" |
+| 556 | `fig_atm_diurnal_pollutants.py` | Diurnal cycles of six criteria pollutants as hourly means with interquartile bands on night-shaded backgrounds, independent y scales with units in every title, ozone / $NO_2$ anti-phase quantified | 空气质量日变化特征、站点监测数据展示, "日变化曲线, 六项污染物, 反相位" |
+| 557 | `fig_atm_vertical_column.py` | Boundary-layer structure: three gas profiles sharing a mixing-ratio axis with inversion band and mixing-layer top, a time-height $NO_2$ curtain, and the column integrated from that curtain plus total ozone in DU | 边界层垂直结构、柱浓度反演结果展示, "垂直廓线, 时间-高度剖面, 柱浓度" |
+| 558 | `fig_scm_network_design.py` | Three-echelon siting map with filled open plants and DCs, hollow dashed rejected candidates, flow arcs width-scaled by units/week, plus a facility-versus-transport cost trade-off curve and per-DC utilisation bars | 供应链网络设计与选址, "网络设计" "选址优化" "配送中心" |
+| 559 | `fig_scm_inventory_policy.py` | Continuous-review (s, S) sawtooth with reorder point and order-up-to lines, lead-time bracket, promotion window and a red backorder fill, plus a service-level versus holding-cost curve and an ABC safety-stock decomposition | 库存策略与安全库存设计, "库存曲线" "再订货点" "服务水平" |
+| 560 | `fig_scm_vehicle_routing.py` | Capacitated vehicle-routing map with one depot, drop-size-scaled customers and four 2-opt cleaned closed loops carrying their own distance and load factor, plus a fleet-size versus total-distance trade-off marking capacity-infeasible plans and a shift-duration gantt | 车辆路径与配送排班, "车辆路径" "VRP" "装载率" |
+| 561 | `fig_scm_demand_forecast.py` | Weekly demand history with a nested 50/80/90 percent quantile fan, realised holdout weeks overlaid and MAPE/bias called out, an x-aligned signed error track below, plus an ABC-XYZ SKU matrix and MAPE-by-horizon bars | 需求预测与预测精度评估, "预测扇形" "MAPE" "ABC-XYZ 分类" |
+| 562 | `fig_scm_bullwhip_effect.py` | Four echelon order series stacked on one deliberately shared y range so the amplification from retailer to supplier is visible rather than autoscaled away, with consumer demand ghosted in every row, plus variance-amplification and peak-to-mean capacity bars | 牛鞭效应与需求放大分析, "牛鞭效应" "方差放大" "共享坐标轴" |
+| 563 | `fig_scm_resilience_disruption.py` | Resilience-triangle recovery curves for three mitigation plans after a tier-1 outage, with measured time-to-recover and a red lost-service area, plus a probability-by-impact risk matrix with an escalate quadrant and a node criticality ranking | 供应链韧性与中断恢复, "恢复曲线" "TTR" "风险矩阵" |

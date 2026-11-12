@@ -1,0 +1,26 @@
+# Rendered figures. All 1219 PNGs are about 790 MB, far past what belongs in a
+# clone. Rebuild with `python scripts/run_all.py --parallel 8`, or skim
+# reference/thumbs/ instead.
+.cursor/skills/scientific-figures/output/
+
+# Written by check_figures.py on every run.
+.cursor/skills/scientific-figures/figure_health.md
+.cursor/skills/scientific-figures/examples/_smoke/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# matplotlib
+.matplotlib/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp

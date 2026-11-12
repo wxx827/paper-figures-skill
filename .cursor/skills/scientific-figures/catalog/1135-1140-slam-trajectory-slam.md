@@ -1,0 +1,12 @@
+# 世界模型 · 轨迹与 SLAM Trajectory & SLAM  `1135-1140`
+
+6 figures. Run any of them from `scripts/`; the PNG lands in `output/` under the same number.
+
+| # | Script | What it draws | Use when |
+|---|--------|---------------|----------|
+| 1135 | `fig_wm_slam_odometry_drift.py` | (10.4, 5.4) | Office floor plan carrying three tracks - navy ground truth, light dashed raw odometry that curls off by 2.55 m, mid-blue loop-closure estimate riding in a pale casing.  The floor plan keeps the left 66% of the canvas on its own; the error-against-distance panel (30% of the map width) and the run-summary card sit in a right-hand column, so nothing overlaps the patrol |
+| 1136 | `fig_wm_slam_density_accum.py` | (10.4, 3.6) | Occupancy-density triptych (a)(b)(c) after fusing 5 / 18 / 24 range scans of the same ring patrol; smeared low-confidence blobs converge to crisp navy wall lines, black leader lines to bold "Robot position (A/B/C)" call-outs, one shared axis and colour range with a single slim colourbar on the right |
+| 1137 | `fig_wm_slam_loop_closure.py` | (10.4, 5.4) | Two-lap pose graph before and after loop closure - drifting double ring on the left, single consistent loop on the right, warm-accent loop-closure arcs in both - with a narrow middle panel comparing mean odometry and loop-edge residuals on a log axis |
+| 1138 | `fig_wm_slam_pose_graph.py` | (10.4, 5.0) | Pose-graph solve detail over a five-pass boustrophedon sweep (93 poses, 92 odometry + 12 revisit edges): SE(2) frame glyphs (heading arm plus lateral arm) with edges shaded by residual, revisit edges bridging neighbouring passes across the interior, plus a square block-sparsity pattern of H (279x279) and a log-scale Gauss-Newton convergence curve at the right |
+| 1139 | `fig_wm_slam_localization_error.py` | (10.4, 6.4) | Four-panel localisation error study on one blue ladder: (a) error against time with a +/-1 s.d. band, (b) the same errors scattered on the floor plan under a shared colour range, (c) histogram tinted by that range with a cumulative curve on a twin axis, (d) per-run RMSE boxplots for four sensor stacks; the worst stretch is ringed in both (a) and (b) |
+| 1140 | `fig_wm_slam_map_merge.py` | (10.4, 5.4) | Three partial robot maps (a)(b)(c) drawn on one shared world extent with grey unobserved remainder, thin cyan arrows feeding a merged global map (d); the two overlap bands are the real mask intersections, outlined and labelled with their computed IoU |

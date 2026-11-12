@@ -1,0 +1,32 @@
+# Runtime dependencies for the scientific-figures library.
+#
+# Only matplotlib and numpy are needed by every figure. The rest are used by
+# subsets of the 1219 generators and by the tooling; installing all of them is
+# the path of least surprise.
+#
+#   pip install -r requirements.txt
+
+# Font fallback resolves a family list glyph by glyph only from 3.6 onward,
+# which is what keeps Latin text in Times while CJK labels come from a Song
+# face. Below that, set_cn_font() would restyle the whole figure.
+matplotlib>=3.6
+numpy>=1.22
+
+# Statistics, curve fitting, spatial structures, signal processing.
+scipy>=1.9
+
+# Tabular data loading, and the whole plot_data.py front door.
+pandas>=1.5
+
+# Excel support for plot_data.py. Clients send .xlsx far more often than .csv,
+# so this is a hard dependency rather than an extra.
+openpyxl>=3.0
+
+# A handful of distribution and matrix figures.
+seaborn>=0.12
+
+# ML demonstration figures (SHAP-style panels, decision boundaries, metrics).
+scikit-learn>=1.1
+
+# Thumbnails (build_reference.py) and PNG inspection (check_figures.py).
+Pillow>=9.0

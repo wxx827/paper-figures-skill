@@ -1,0 +1,16 @@
+# 软件工程 · Software engineering  `874-883`
+
+10 figures. Run any of them from `scripts/`; the PNG lands in `output/` under the same number.
+
+| # | Script | What it draws | Use when |
+|---|--------|---------------|----------|
+| 874 | `fig_nmd_pet_suv_timeline.py` | Dynamic FDG time-activity curves for malignant, inflammatory and background tissue with a bi-exponential blood-pool fit, paired pre/post SUVmax response slopes and a volume-uptake scatter | PET动态摄取与疗效评价, "SUV时间曲线", "时间-活度曲线", "双相拟合", "PERCIST应答", "采集时间窗" |
+| 875 | `fig_nmd_dosimetry_decay.py` | Semi-log decay of four therapeutic nuclides with a kidney in-vivo time-activity curve showing effective half-life below both biological and physical, plus cumulated activity and absorbed dose per organ | 核素治疗内照射剂量学, "衰变曲线", "半衰期", "有效半衰期", "累积活度", "吸收剂量", "MIRD" |
+| 876 | `fig_bpr_batch_kinetics.py` | Batch fermentation time course: one Monod / Luedeking-Piret solution drives biomass, substrate and product, with lag / exponential / stationary / decline bands, the observed specific growth rate and the apparent yield coefficients. | 分批发酵全程曲线, 四个生长期分带, "分批发酵" "生长曲线" "得率系数" |
+| 877 | `fig_bpr_fedbatch_profile.py` | Fed-batch profile for constant, exponential and DO-stat feeding: biomass / titer / broth volume, feed rate, dissolved oxygen and pH, final titer bars and overflow acetate driven by residual glucose. | 补料分批工艺, 三种流加策略对比, "流加发酵" "溶氧" "乙酸溢流" |
+| 878 | `fig_bpr_monod_saturation.py` | Monod saturation kinetics with the mu_max asymptote and the Ks half-saturation point, a Haldane substrate-inhibition comparison, the Lineweaver-Burk double reciprocal that recovers the same constants, and a four-strain rate / affinity panel. | Monod 动力学与双倒数线性化, 底物抑制对比, "比生长速率" "半饱和常数" "双倒数作图" |
+| 879 | `fig_bpr_bioreactor_scaleup.py` | Scale-up across 0.5 L to 10 m3 under a constant P/V criterion: kLa, specific power, mixing time and tip shear on one log ratio axis, a kLa contour map over agitation and aeration, and the refitted mixing-time power law. | 生物反应器放大准则冲突, 多尺度参数对比, "放大效应" "kLa" "混合时间" |
+| 880 | `fig_bpr_chromatography.py` | Ion-exchange elution profile built from exponentially modified Gaussians with a salt gradient, measured resolution and peak asymmetry, pooled fraction bands, plus a purification fold / yield ladder and an SDS-PAGE gel from the same mass balance. | 层析纯化洗脱图与纯化表, 电泳条带示意, "洗脱峰" "分离度" "回收率" |
+| 881 | `fig_bpr_doe_response_surface.py` | Central composite design and its fitted quadratic response surface: filled contours over the region of operability, the stationary point solved from the gradient, a Pareto of standardised effects and an observed-predicted parity panel with R2 and Q2. | 响应面法优化培养条件, 中心复合设计, "响应面" "Pareto 效应图" "最优点" |
+| 882 | `fig_act_mortality_table.py` | Life-table mortality: q_x per mille on a semi-log axis for two sexes and two vintages, four bracketed segments, plus survivorship l_x and expectation of life e_x | 寿险定价与生命表讲解, "死亡率曲线", "生命表", "预期余命" |
+| 883 | `fig_act_claims_triangle.py` | Loss run-off triangle heat map with a genuinely blank corner and a hatched chain-ladder completion, age-to-age development factors and the paid-to-ultimate reserve waterfall | 非寿险准备金评估, "流量三角形", "链梯法", "IBNR准备金" |
