@@ -20,6 +20,7 @@
 
 <p align="center">
   <a href="#图库一瞥">图库一瞥</a> ·
+  <a href="#这是什么">这是什么</a> ·
   <a href="#安装">安装</a> ·
   <a href="#先做自检">先做自检</a> ·
   <a href="#三种用法">三种用法</a> ·
@@ -29,6 +30,35 @@
 </p>
 
 ---
+
+## 图库一瞥
+
+<p align="center">
+  <img src=".github/assets/showcase_01_stats.jpg" alt="统计与通用图表：桑基图、和弦图、河流图、云雨图、矩形树图" width="100%">
+</p>
+
+<p align="center">
+  <img src=".github/assets/showcase_02_earth.jpg" alt="地理、遥感与环境：产量空间分布、波段合成、洋流、臭氧等值线、作物制图" width="100%">
+</p>
+
+<p align="center">
+  <img src=".github/assets/showcase_03_life.jpg" alt="医学、生命与生态：病理全片、脑功能连接、睡眠谱图、脑刺激治疗窗、物种演替" width="100%">
+</p>
+
+<p align="center">
+  <img src=".github/assets/showcase_04_phys.jpg" alt="物理、材料与工程：EBSD 晶粒取向、熔池温度场、基准曲面、硬度分布、人工势场" width="100%">
+</p>
+
+<p align="center">
+  <img src=".github/assets/showcase_05_ai.jpg" alt="人工智能与世界模型：新视角合成、光流误差图、损失地形、风格迁移、语谱图" width="100%">
+</p>
+
+<p align="center">
+  <sub>以上 25 张都是本库脚本直接渲染的原图，每张下面标了对应的脚本名。其余 1194 张的缩略图在
+  <a href=".cursor/skills/scientific-figures/reference/thumbs/"><code>reference/thumbs/</code></a>，
+  按方向分组的目录在
+  <a href=".cursor/skills/scientific-figures/catalog/INDEX.md"><code>catalog/INDEX.md</code></a>。</sub>
+</p>
 
 ## 这是什么
 
@@ -43,60 +73,6 @@
 
 > 图里画的都是程序生成的示例数据，只用来演示版式和配色，不能直接当结果图用。
 > 哪些脚本容易换成自己的数据、哪些不容易，见[已知边界](#已知边界)第 3 条。
-
-## 图库一瞥
-
-<table>
-  <tr>
-    <td align="center" width="33%">
-      <img src=".cursor/skills/scientific-figures/reference/thumbs/22_sankey.jpg" alt="桑基图"><br>
-      <sub>桑基图 · <code>fig_sankey.py</code></sub>
-    </td>
-    <td align="center" width="33%">
-      <img src=".cursor/skills/scientific-figures/reference/thumbs/12_raincloud.jpg" alt="雨云图"><br>
-      <sub>雨云图 · <code>fig_raincloud.py</code></sub>
-    </td>
-    <td align="center" width="33%">
-      <img src=".cursor/skills/scientific-figures/reference/thumbs/57_hexgrid_map.jpg" alt="六边形网格地图"><br>
-      <sub>六边形网格地图 · <code>fig_hexgrid_map.py</code></sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src=".cursor/skills/scientific-figures/reference/thumbs/82_climate_stripes.jpg" alt="气候条纹图"><br>
-      <sub>气候条纹图 · <code>fig_climate_stripes.py</code></sub>
-    </td>
-    <td align="center">
-      <img src=".cursor/skills/scientific-figures/reference/thumbs/216_ocean_currents.jpg" alt="洋流流线图"><br>
-      <sub>洋流流线图 · <code>fig_ocean_currents.py</code></sub>
-    </td>
-    <td align="center">
-      <img src=".cursor/skills/scientific-figures/reference/thumbs/65_confusion_grid.jpg" alt="混淆矩阵组图"><br>
-      <sub>混淆矩阵组图 · <code>fig_confusion_grid.py</code></sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src=".cursor/skills/scientific-figures/reference/thumbs/40_lollipop.jpg" alt="棒棒糖图"><br>
-      <sub>棒棒糖图 · <code>fig_lollipop.py</code></sub>
-    </td>
-    <td align="center">
-      <img src=".cursor/skills/scientific-figures/reference/thumbs/196_price_heatmap.jpg" alt="价格热力图"><br>
-      <sub>价格热力图 · <code>fig_price_heatmap.py</code></sub>
-    </td>
-    <td align="center">
-      <img src=".cursor/skills/scientific-figures/reference/thumbs/206_time_space_diagram.jpg" alt="时空图"><br>
-      <sub>时空图 · <code>fig_time_space_diagram.py</code></sub>
-    </td>
-  </tr>
-</table>
-
-<p align="center">
-  <sub>以上 9 张只是样例。全部缩略图在
-  <a href=".cursor/skills/scientific-figures/reference/thumbs/"><code>reference/thumbs/</code></a>，
-  按方向分组的目录在
-  <a href=".cursor/skills/scientific-figures/catalog/INDEX.md"><code>catalog/INDEX.md</code></a>。</sub>
-</p>
 
 ## 安装
 
