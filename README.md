@@ -34,23 +34,23 @@
 ## 图库一瞥
 
 <p align="center">
-  <img src=".github/assets/showcase_01_stats.jpg" alt="统计与通用图表：桑基图、和弦图、河流图、云雨图、矩形树图" width="100%">
+  <img src=".github/assets/showcase_01_earth.jpg" alt="地理、遥感与环境：产量空间分布、波段合成、洋流、臭氧等值线、作物制图" width="100%">
 </p>
 
 <p align="center">
-  <img src=".github/assets/showcase_02_earth.jpg" alt="地理、遥感与环境：产量空间分布、波段合成、洋流、臭氧等值线、作物制图" width="100%">
+  <img src=".github/assets/showcase_02_life.jpg" alt="医学、生命与生态：病理全片、脑功能连接、睡眠谱图、脑刺激治疗窗、物种演替" width="100%">
 </p>
 
 <p align="center">
-  <img src=".github/assets/showcase_03_life.jpg" alt="医学、生命与生态：病理全片、脑功能连接、睡眠谱图、脑刺激治疗窗、物种演替" width="100%">
+  <img src=".github/assets/showcase_03_phys.jpg" alt="物理、材料与工程：EBSD 晶粒取向、熔池温度场、基准曲面、硬度分布、人工势场" width="100%">
 </p>
 
 <p align="center">
-  <img src=".github/assets/showcase_04_phys.jpg" alt="物理、材料与工程：EBSD 晶粒取向、熔池温度场、基准曲面、硬度分布、人工势场" width="100%">
+  <img src=".github/assets/showcase_04_ai.jpg" alt="人工智能与世界模型：新视角合成、光流误差图、损失地形、风格迁移、语谱图" width="100%">
 </p>
 
 <p align="center">
-  <img src=".github/assets/showcase_05_ai.jpg" alt="人工智能与世界模型：新视角合成、光流误差图、损失地形、风格迁移、语谱图" width="100%">
+  <img src=".github/assets/showcase_05_stats.jpg" alt="统计与通用图表：桑基图、和弦图、河流图、云雨图、矩形树图" width="100%">
 </p>
 
 <p align="center">
